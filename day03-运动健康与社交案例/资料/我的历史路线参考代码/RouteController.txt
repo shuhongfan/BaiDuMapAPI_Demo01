@@ -1,0 +1,24 @@
+   /**
+     * 历史路线
+     *
+     * @param userId
+     * @return
+     */
+    @GetMapping("history")
+    public Object queryHistoryRoute(@RequestParam(value = "userId", required = false) Long userId,
+                                    @RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum,
+                                    @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize) {
+        return this.routeService.queryHistoryRoute(userId, pageNum, pageSize);
+    }
+
+    /**
+     * 历史路线(按照日期显示)
+     *
+     * @return
+     */
+    @GetMapping("history/date")
+    public Object queryHistoryRouteByDate(@RequestParam(value = "userId", required = false) Long userId,
+                                          @RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum,
+                                          @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize) {
+        return this.routeService.queryHistoryRouteByDate(userId, pageNum, pageSize);
+    }

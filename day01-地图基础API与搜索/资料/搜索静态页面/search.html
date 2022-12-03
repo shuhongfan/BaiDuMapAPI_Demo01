@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>地图找房 - 地图搜索 </title>
+    <style type="text/css">
+        html {
+            height: 100%
+        }
+
+        body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px
+        }
+
+        #container {
+            height: 100%
+        }
+
+        .district {
+            width: 84px;
+            height: 84px;
+            line-height: 16px;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            overflow: hidden;
+            text-align: center;
+            font-family: PingFangSC-Semibold;
+            color: #fff;
+            background: #00ae66 !important;
+            box-sizing: border-box;
+        }
+
+        .district i {
+            font-size: 12px;
+            color: hsla(0, 0%, 100%, .7);
+            line-height: 12px;
+            margin-top: 4px;
+            font-style: normal;
+        }
+
+        #platform > div > div > div {
+            background: none !important;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=1.0&type=webgl&ak=XdBGuSs0p90SNRM3dtpGGbvEygzfQyte"></script>
+    <script src="http://mapopen.bj.bcebos.com/github/BMapGLLib/RichMarker/src/RichMarker.min.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<script type="application/javascript">
+    function showInfo(map) {
+        let bound = map.getBounds(); //可视范围矩形坐标，其中sw表示矩形区域的西南角，参数ne表示矩形区域的东北角
+        let zoom = map.getZoom(); //缩放级别
+        // console.log(bound);
+        $.ajax({
+            url: "/house/search",
+            data: {
+                maxLongitude: bound.ne.lng,
+                minLongitude: bound.sw.lng,
+                maxLatitude: bound.ne.lat,
+                minLatitude: bound.sw.lat,
+                zoom: zoom
+            },
+            success: function (data) {
+                showMapMarker(data, map);
+            }
+        });
+
+        //测试效果：
+        // let data = [{"name":"徐汇","price":"1028.43","total":"6584","longitude":121.43676,"latitude":31.18831},{"name":"黄浦","price":"1016.19","total":"7374","longitude":121.49295,"latitude":31.22337},{"name":"长宁","price":"1008.34","total":"4380","longitude":121.42462,"latitude":31.22036},{"name":"静安","price":"1005.34","total":"8077","longitude":121.4444,"latitude":31.22884},{"name":"普陀","price":"1026.14","total":"5176","longitude":121.39703,"latitude":31.24951},{"name":"金山","price":"1099.67","total":"6","longitude":121.34164,"latitude":30.74163},{"name":"松江","price":"1017.71","total":"14","longitude":121.22879,"latitude":31.03222},{"name":"青浦","price":"1038.11","total":"751","longitude":121.12417,"latitude":31.14974},{"name":"奉贤","price":"1108.63","total":"35","longitude":121.47412,"latitude":30.9179},{"name":"浦东","price":"1030.22","total":"8294","longitude":121.5447,"latitude":31.22249},{"name":"嘉定","price":"1041.45","total":"1620","longitude":121.2655,"latitude":31.37473},{"name":"宝山","price":"1050.65","total":"102","longitude":121.4891,"latitude":31.4045},{"name":"闵行","price":"1027.15","total":"941","longitude":121.38162,"latitude":31.11246},{"name":"杨浦","price":"1007.78","total":"2747","longitude":121.526,"latitude":31.2595},{"name":"虹口","price":"1025.81","total":"4187","longitude":121.48162,"latitude":31.27788}];
+        // showMapMarker(data, map);
+    }
+
+    //显示覆盖物
+    function showMapMarker(data, map) {
+        for (let vo of data) {
+            let html = "<div class=\"district\">" + vo.name + "<span>" + vo.price + "万</span><i>" + vo.total + "套</i></div>";
+            let marker = new BMapGLLib.RichMarker(html, new BMapGL.Point(vo.longitude, vo.latitude));
+            map.addOverlay(marker);
+        }
+    }
+
+    //清除覆盖物
+    function clearMapMarker(map) {
+        let markers = map.getOverlays(); //获取到地图上所有的覆盖物
+        for (let marker of markers) { //循环将其删除
+            map.removeOverlay(marker);
+        }
+    }
+
+    $(function () {
+        //地图默认位置，上海市
+        let defaultX = 121.48130241985999;
+        let defaultY = 31.235156971414239;
+        let defaultZoom = 12; //默认缩放比例
+
+        let map = new BMapGL.Map("container");          // 创建地图实例
+        let point = new BMapGL.Point(defaultX, defaultY);  // 创建点坐标
+        map.centerAndZoom(point, defaultZoom);                 // 初始化地图，设置中心点坐标和地图级别
+        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        //显示比例尺
+        map.addControl(new BMapGL.ScaleControl({anchor: BMAP_ANCHOR_BOTTOM_RIGHT}));
+
+        map.addEventListener("dragstart", () => {  //拖动开始事件
+            clearMapMarker(map)
+        });
+        map.addEventListener("dragend", () => { //拖动结束事件
+            showInfo(map)
+        });
+        map.addEventListener("zoomstart", () => { //缩放开始事件
+            clearMapMarker(map)
+        });
+        map.addEventListener("zoomend", () => { //缩放结束事件
+            showInfo(map)
+        });
+        //初始显示数据
+        showInfo(map);
+    });
+</script>
+</body>
+</html>

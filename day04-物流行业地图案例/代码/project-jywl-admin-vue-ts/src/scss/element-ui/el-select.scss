@@ -1,0 +1,10 @@
+.el-select-dropdown {
+  background: #ffffff;
+  border: 1px solid #f5efee;
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.06);
+  /*修改下拉选鼠标哦悬浮的背景色*/
+  .el-select-dropdown__item.hover,
+  .el-select-dropdown__item:hover {
+    background: #fff6e2;
+  }
+}

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'DIN-Bold';
+  src: url('../assets/fonts/DIN-Bold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DIN-Medium';
+  src: url('../assets/fonts/DIN-Medium.ttf');
+  font-weight: normal;
+  font-style: normal;
+}

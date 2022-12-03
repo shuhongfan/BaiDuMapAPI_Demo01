@@ -1,0 +1,88 @@
+UserService中的实现：
+    /**
+     * 查询我的信息
+     *
+     * @param userId
+     * @return
+     */
+    public MyInfoVo queryMyInfo(Long userId) {
+        if (userId == null) {
+            userId = UserThreadLocal.get();
+        }
+
+        Query query = Query.query(Criteria.where("userId").is(userId));
+        User user = this.mongoTemplate.findOne(query, User.class);
+        if (null == user) {
+            return null;
+        }
+        //拷贝基础信息
+        MyInfoVo myInfoVo = BeanUtil.toBeanIgnoreError(user, MyInfoVo.class);
+
+        Date today = new Date();
+        Long minDate = DateUtil.beginOfMonth(today).getTime();
+        Long maxDate = DateUtil.endOfMonth(today).getTime();
+
+        List<Route> routeList = this.routeService.queryRouteListByDate(userId, minDate, maxDate);
+        if (CollUtil.isEmpty(routeList)) {
+            //返回默认值
+            myInfoVo.setCount(0);
+            myInfoVo.setTotalDistance(0.00);
+            myInfoVo.setAverageSpeed(0.00);
+            myInfoVo.setTotalTime("00:00");
+            return myInfoVo;
+        }
+
+        //运动次数
+        myInfoVo.setCount(routeList.size());
+
+        //计算总里程
+        try {
+            double totalDistance = routeList.stream().mapToDouble(route -> Convert.toDouble(route.getDistance(), 0d)).sum();
+            myInfoVo.setTotalDistance(NumberUtil.round(totalDistance, 2).doubleValue());
+        } catch (Exception e) {
+            myInfoVo.setTotalDistance(0d);
+        }
+
+        //计算平均速度
+        try {
+            OptionalDouble averageSpeed = routeList.stream().mapToDouble(route -> Convert.toDouble(route.getSpeed(), 0d)).average();
+            myInfoVo.setAverageSpeed(NumberUtil.round(averageSpeed.getAsDouble(), 2).doubleValue());
+        } catch (Exception e) {
+            myInfoVo.setAverageSpeed(0d);
+        }
+
+        //计算运动总时间
+        try {
+            long totalTime = routeList.stream()
+                    .filter(route -> route.getEndPoint() != null && route.getStartPoint() != null)
+                    .mapToLong(route -> route.getEndPoint().getLocTime() - route.getStartPoint().getLocTime())
+                    .sum();
+            myInfoVo.setTotalTime(TimeUtils.formatTime(totalTime));
+        } catch (Exception e) {
+            myInfoVo.setTotalTime("0:00");
+        }
+
+        return myInfoVo;
+
+    }
+
+
+
+RouteService中的实现：
+
+
+    /**
+     * 按照时间范围查询路线（包含时间边界）
+     *
+     * @param userId
+     * @param minDate
+     * @param maxDate
+     * @return
+     */
+    public List<Route> queryRouteListByDate(Long userId, Long minDate, Long maxDate) {
+        Query query = Query.query(Criteria.where("endTime").gte(minDate)
+                .and("status").is(0)
+                .and("userId").is(userId)
+                .andOperator(Criteria.where("endTime").lte(maxDate)));
+        return this.mongoTemplate.find(query, Route.class);
+    }

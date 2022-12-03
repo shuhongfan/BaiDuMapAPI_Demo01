@@ -1,0 +1,22 @@
+.el-input .el-input__inner:hover {
+  border: 1px solid #887e7e;
+}
+/* element样式重置 start */
+/* 去掉input尾部上下小箭头 start */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  -o-appearance: none !important;
+  -ms-appearance: none !important;
+  appearance: none !important;
+  margin: 0;
+}
+input[type='number'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  -o-appearance: textfield;
+  -ms-appearance: textfield;
+  appearance: textfield;
+}
+/* 去掉input尾部上下小箭头 end */

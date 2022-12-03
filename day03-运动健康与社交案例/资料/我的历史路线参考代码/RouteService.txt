@@ -1,0 +1,119 @@
+    /**
+     * 查询用户的历史路线
+     *
+     * @param userId
+     * @return
+     */
+    public Object queryHistoryRoute(Long userId, Integer pageNum, Integer pageSize) {
+        Criteria criteria;
+        if (userId != null) {
+            // 查询别人的数据，只查询已投稿的路线
+            criteria = Criteria.where("userId").is(userId).and("status").is(0)
+                    .and("isShare").is(true);
+        } else {
+            //查询自己的数据
+            criteria = Criteria.where("userId").is(UserThreadLocal.get())
+                    .and("status").is(0);
+        }
+
+        PageRequest pageRequest = PageRequest.of(pageNum - 1, pageSize, Sort.by(Sort.Order.desc("startTime")));
+
+        Query query = Query.query(criteria).with(pageRequest);
+
+        List<Route> routeList = this.mongoTemplate.find(query, Route.class);
+        PageResult pageResult = new PageResult();
+        pageResult.setPageNum(pageNum);
+        pageResult.setPageSize(pageSize);
+        pageResult.setTotal(this.mongoTemplate.count(Query.query(criteria), Route.class));
+        pageResult.setRecords(routeList.stream().map(
+                route -> {
+                    RouteVo routeVo = BeanUtil.toBeanIgnoreError(route, RouteVo.class);
+                    try {
+                        routeVo.setTimeValue(route.getEndPoint().getLocTime() - route.getStartPoint().getLocTime());
+                    } catch (Exception e) {
+                        routeVo.setTimeValue(0L);
+                    }
+                    return routeVo;
+                }
+        ).collect(Collectors.toList()));
+        return pageResult;
+    }
+
+    /**
+     * 查询历史路线(日期分组)
+     *
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    public Object queryHistoryRouteByDate(Long userId, Integer pageNum, Integer pageSize) {
+        //查询自己的历史路线
+        Criteria criteria;
+        if (userId != null) {
+            // 查询别人的数据，只查询已投稿的路线
+            criteria = Criteria.where("userId").is(userId).and("status").is(0)
+                    .and("isShare").is(true);
+        } else {
+            //查询自己的数据
+            criteria = Criteria.where("userId").is(UserThreadLocal.get())
+                    .and("status").is(0);
+        }
+
+        Query query = Query.query(criteria).with(Sort.by(Sort.Order.desc("startTime")));
+        //查询出所有的路线
+        List<Route> routeList = this.mongoTemplate.find(query, Route.class);
+
+        //定义响应结果结构，按照日期显示
+        List<HistoryRouteVo> result = new ArrayList<>();
+        //下面对于历史列表进行处理，按照日期显示
+        for (Route route : routeList) {
+            String dateFormat = DateUtil.format(new Date(route.getEndTime()), "MM月dd日");
+            String yearFormat = DateUtil.format(new Date(route.getEndTime()), "yyyy年");
+
+            HistoryRouteVo historyRouteVo = null;
+            for (HistoryRouteVo vo : result) {
+                if (StrUtil.equals(vo.getDate(), dateFormat) && StrUtil.equals(vo.getYear(), yearFormat)) {
+                    historyRouteVo = vo;
+                    break;
+                }
+            }
+
+            if (null == historyRouteVo) {
+                historyRouteVo = new HistoryRouteVo();
+                historyRouteVo.setDate(dateFormat);
+                historyRouteVo.setYear(yearFormat);
+                result.add(historyRouteVo);
+            }
+
+            RouteVo routeVo = BeanUtil.toBeanIgnoreError(route, RouteVo.class);
+            try {
+                routeVo.setTimeValue(route.getEndPoint().getLocTime() - route.getStartPoint().getLocTime());
+            } catch (Exception e) {
+                routeVo.setTimeValue(0L);
+            }
+            historyRouteVo.getRouteList().add(routeVo);
+        }
+
+        //分页返回数据
+        int[] startEnd = PageUtil.transToStartEnd(pageNum - 1, pageSize);
+        int start = Math.max(startEnd[0], 0);
+        int end = Math.min(startEnd[1], result.size());
+
+        //最终返回的数据
+        List<HistoryRouteVo> subResult = ListUtil.sub(result, start, end);
+
+        //计算运动总时间
+        for (HistoryRouteVo historyRouteVo : subResult) {
+            Long totalTime = historyRouteVo.getRouteList().stream()
+                    .mapToLong(value -> value.getTimeValue())
+                    .sum();
+            historyRouteVo.setTotalTime(TimeUtils.formatTime(totalTime));
+        }
+
+        PageResult pageResult = new PageResult();
+        pageResult.setPageNum(pageNum);
+        pageResult.setPageSize(pageSize);
+        pageResult.setTotal(Convert.toLong(result.size()));
+        pageResult.setRecords(subResult);
+        return pageResult;
+    }

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="871px" height="1776px" viewBox="0 0 871 1776" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>iPhone 8-1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="151" height="13" rx="6.5"></rect>
+        <circle id="path-3" cx="380" cy="10" r="10"></circle>
+        <filter x="-2.5%" y="-2.5%" width="105.0%" height="110.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="121.058392%" cy="134.125808%" fx="121.058392%" fy="134.125808%" r="100.661381%" id="radialGradient-5">
+            <stop stop-color="#434343" offset="0%"></stop>
+            <stop stop-color="#161616" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="100%" id="radialGradient-6">
+            <stop stop-color="#2A4893" offset="0%"></stop>
+            <stop stop-color="#213054" offset="100%"></stop>
+        </radialGradient>
+        <circle id="path-7" cx="14.5" cy="14.5" r="7.5"></circle>
+        <filter x="-60.0%" y="-60.0%" width="220.0%" height="220.0%" filterUnits="objectBoundingBox" id="filter-9">
+            <feMorphology radius="1.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-8-1">
+            <g id="Body">
+                <path d="M867,512.900849 L867,1627 C867,1676.57682 852.845703,1776 716,1776 L155,1776 C19.7480469,1776 5,1677.12891 5,1627 L5,674.897922 C6.23647049,673.636788 7,671.910431 7,670.006349 L7,379.993651 C7,378.088889 6.23718702,376.361327 5,375.099738 L5,149 C5,61.4667969 50.0078125,0 155,0 L719,0 C787.796875,-1.08235242e-14 867,29.7890625 867,149 L867,375.101993 C865.76353,376.363075 865,378.089363 865,379.993367 L865,508.006633 C865,509.911969 865.762813,511.639469 867,512.900849 Z M61,219 L61,1553 L811,1553 L811,219 L61,219 Z" id="Combined-Shape" fill="#E9EAEC"></path>
+                <path d="M851,149 L851,1627 C851,1659.2305 844.854193,1688.127 829.492929,1711.23324 C808.81835,1742.3317 772.817108,1760 716,1760 L155,1760 C98.8734326,1760 63.1966652,1742.4218 42.605699,1711.44173 C27.2324184,1688.31191 21,1659.2199 21,1627 L21,149 C21,107.709917 31.6299618,74.9277056 52.3644539,52.5495143 C74.3941264,28.7734689 108.403133,16 155,16 L719,16 C754.920574,16 786.224178,24.5223336 808.904368,42.369667 C835.982506,63.6778023 851,98.2289943 851,149 Z M61,219 L61,1553 L811,1553 L811,219 L61,219 Z" id="Combined-Shape" fill="#FAFBFD"></path>
+                <path d="M0,230.007812 C0,228.346644 1.34967041,227 3.00925446,227 L7,227 L7,297 L3.00925446,297 C1.34728911,297 0,295.664163 0,293.992188 L0,230.007812 Z" id="Rectangle-165" fill="#E9EAEC"></path>
+                <path d="M1,381.997962 C1,380.342233 2.34967041,379 4.00925446,379 L8,379 L8,510 L4.00925446,510 C2.34728911,510 1,508.660776 1,507.002038 L1,381.997962 Z" id="Rectangle-165" fill="#E9EAEC"></path>
+                <path d="M1,543.005017 C1,541.345392 2.34967041,540 4.00925446,540 L8,540 L8,670.994666 C8,671.549897 7.56211865,672 6.99707067,672 L4.00925446,672 C2.34728911,672 1,670.650553 1,668.994983 L1,543.005017 Z" id="Rectangle-165" fill="#E9EAEC"></path>
+                <path d="M864,381.005017 C864,379.345392 865.333123,378.190446 866.96863,378.42409 L868.03137,378.57591 C869.670899,378.810128 871,380.350419 871,381.990706 L871,506.009294 C871,507.661015 869.666877,509.190446 868.03137,509.42409 L866.96863,509.57591 C865.329101,509.810128 864,508.650553 864,506.994983 L864,381.005017 Z" id="Rectangle-165" fill="#E9EAEC" transform="translate(867.500000, 444.000021) scale(-1, 1) translate(-867.500000, -444.000021) "></path>
+            </g>
+            <g id="Front" transform="translate(56.000000, 49.000000)">
+                <g id="Speaker" opacity="0.801364272" transform="translate(305.000000, 61.000000)">
+                    <path d="M75,1610 L75,1610 C37.444637,1610 7,1579.55536 7,1542 C7,1504.44464 37.444637,1474 75,1474 C112.555363,1474 143,1504.44464 143,1542 C143,1579.55536 112.555363,1610 75,1610 L75,1610 Z" id="Path" fill="#979797" fill-rule="nonzero"></path>
+                    <path d="M75,1602 L75,1602 C108.137085,1602 135,1575.13708 135,1542 C135,1508.86292 108.137085,1482 75,1482 C41.862915,1482 15,1508.86292 15,1542 C15,1575.13708 41.862915,1602 75,1602 L75,1602 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#272627" xlink:href="#path-1"></use>
+                </g>
+                <g id="Sensor">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use fill="#323234" fill-rule="evenodd" xlink:href="#path-3"></use>
+                </g>
+                <g id="Camera" transform="translate(229.000000, 53.000000)">
+                    <circle id="Oval-57" fill="url(#radialGradient-5)" cx="14.5" cy="14.5" r="14.5"></circle>
+                    <mask id="mask-8" fill="white">
+                        <use xlink:href="#path-7"></use>
+                    </mask>
+                    <g id="Mask" opacity="0.387534981">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-9)" xlink:href="#path-7"></use>
+                        <use fill="url(#radialGradient-6)" fill-rule="evenodd" xlink:href="#path-7"></use>
+                    </g>
+                </g>
+                <path d="M5,165 L755,165 C757.761424,165 760,167.238576 760,170 L760,1504 C760,1506.76142 757.761424,1509 755,1509 L5,1509 C2.23857625,1509 0,1506.76142 0,1504 L0,170 C0,167.238576 2.23857625,165 5,165 Z M5,170 L5,1504 L755,1504 L755,170 L5,170 Z" id="Combined-Shape" fill="#101010"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,240 @@
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a6610000059006273"),
+    userId: NumberLong("1001"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.610722,
+            31.035222
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a6610000059006274"),
+    userId: NumberLong("1002"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.610363,
+            31.036602
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a6610000059006275"),
+    userId: NumberLong("1003"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.607656,
+            31.034573
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a6610000059006276"),
+    userId: NumberLong("1004"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.61451,
+            31.031551
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a6610000059006277"),
+    userId: NumberLong("1005"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.607896,
+            31.029751
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a6610000059006278"),
+    userId: NumberLong("1006"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.606027,
+            31.031133
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a6610000059006279"),
+    userId: NumberLong("1007"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.617238,
+            31.035047
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a661000005900627a"),
+    userId: NumberLong("1008"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.614109,
+            31.038282
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a661000005900627b"),
+    userId: NumberLong("1009"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.609238,
+            31.039715
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a661000005900627c"),
+    userId: NumberLong("1010"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.603278,
+            31.035221
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a661000005900627d"),
+    userId: NumberLong("1011"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.604339,
+            31.037646
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a661000005900627e"),
+    userId: NumberLong("1012"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.594515,
+            31.028979
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a661000005900627f"),
+    userId: NumberLong("1013"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.587607,
+            31.029507
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a6610000059006280"),
+    userId: NumberLong("1014"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.583516,
+            31.033618
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a6610000059006281"),
+    userId: NumberLong("1015"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.587252,
+            31.041365
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a6610000059006282"),
+    userId: NumberLong("1016"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.568563,
+            31.043993
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a6610000059006283"),
+    userId: NumberLong("1017"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.573625,
+            31.034876
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a6610000059006284"),
+    userId: NumberLong("1018"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.572622,
+            31.030589
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a6610000059006285"),
+    userId: NumberLong("1019"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.56472,
+            31.023567
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );
+db.getCollection("tb_user_location").insert( {
+    _id: ObjectId("60ebb70a6610000059006286"),
+    userId: NumberLong("1020"),
+    location: {
+        type: "Point",
+        coordinates: [
+            121.564806,
+            31.017929
+        ]
+    },
+    updated: NumberLong("1626053355225")
+} );

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1762px" height="2496px" viewBox="0 0 1762 2496" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>iPad-1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M56,112 C86.927946,112 112,86.927946 112,56 C112,25.072054 86.927946,0 56,0 C25.072054,0 0,25.072054 0,56 C0,86.927946 25.072054,112 56,112 Z" id="path-1"></path>
+        <filter x="-1.8%" y="-0.9%" width="103.6%" height="103.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowOffsetOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-1.8%" y="-0.9%" width="103.6%" height="103.6%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="0.5" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <circle id="path-4" cx="56" cy="56" r="48"></circle>
+        <filter x="-1.6%" y="-1.6%" width="103.1%" height="103.1%" filterUnits="objectBoundingBox" id="filter-5">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.03 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <ellipse id="path-6" cx="14.3385323" cy="13.6203449" rx="6.45875091" ry="6.45174231"></ellipse>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPad-1" transform="translate(12.000000, 12.000000)">
+            <g id="Device">
+                <g id="Faceplate">
+                    <rect id="Faceplate-Border" stroke="#E9EAEC" stroke-width="12" x="-6" y="-6" width="1750" height="2484" rx="90"></rect>
+                    <path d="M0,89.9906548 C0,40.2901885 40.2978153,0 90.0094743,0 L1647.99053,0 C1697.70139,0 1738,40.303933 1738,89.9906548 L1738,2382.00935 C1738,2431.70981 1697.70218,2472 1647.99053,2472 L90.0094743,2472 C40.2986143,2472 0,2431.69607 0,2382.00935 L0,89.9906548 Z M100,213 L100,2261 L1636,2261 L1636,213 L100,213 Z" id="Combined-Shape" fill="#FAFBFD"></path>
+                </g>
+                <g id="Home-Button" transform="translate(814.000000, 2323.000000)">
+                    <g id="Outer-Ring">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#979797" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="Inner-Ring">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    </g>
+                </g>
+                <g id="Camera" transform="translate(857.000000, 90.000000)">
+                    <ellipse id="Outer-Lens" fill="#323234" cx="14.7033915" cy="13.9848082" rx="14" ry="13.9848082"></ellipse>
+                    <mask id="mask-7" fill="white">
+                        <use xlink:href="#path-6"></use>
+                    </mask>
+                    <use id="Mask" fill="#223A7E" xlink:href="#path-6"></use>
+                </g>
+                <path d="M93,209.024526 C93,207.354126 94.3617554,206 96.0319067,206 L1639.96809,206 C1641.64257,206 1643,207.358364 1643,209.024526 L1643,2264.97547 C1643,2266.64587 1641.63824,2268 1639.96809,2268 L96.0319067,2268 C94.3574309,2268 93,2266.64164 93,2264.97547 L93,209.024526 Z M100,213 L100,2261 L1636,2261 L1636,213 L100,213 Z" id="Combined-Shape" fill="#1D1D1D" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>
