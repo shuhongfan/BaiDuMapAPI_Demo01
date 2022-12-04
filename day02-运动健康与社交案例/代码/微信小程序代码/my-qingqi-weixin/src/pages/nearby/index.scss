@@ -1,0 +1,88 @@
+.nearbyCont {
+  background: #f9f9f9;
+  min-height: 85vh;
+  .goExercise {
+    margin: 0 auto;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -150px;
+  }
+  .taroNavbarWrap {
+    padding-top: 40px;
+    background-color: #fff;
+    color: #181a39;
+  }
+  .at-tabs {
+    margin-top: 165px;
+    min-height: 85vh;
+    .at-tabs__item {
+      font-size: 32px;
+      font-family: PingFangSC, PingFangSC-Regular;
+      font-weight: 400;
+      text-align: center;
+      color: #7a7d9e;
+      line-height: 44px;
+    }
+    .at-tabs__header {
+      width: 400px;
+      margin-left: 150px;
+      color: #7a7d9e;
+      font-size: 32px;
+      position: fixed;
+      z-index: 2;
+      top: 70px;
+      background: transparent;
+      .at-tabs__item--active {
+        font-weight: 700;
+        color: #181a39;
+      }
+      .at-tabs__item-underline {
+        width: 80px;
+        left: 60px;
+        height: 12px;
+        background: #fcd700;
+        bottom: 25px;
+        z-index: -1;
+      }
+    }
+    .at-tabs__underline {
+      display: none;
+    }
+  }
+  .at-tabs__body {
+    min-height: 85vh;
+  }
+  .at-tabs-pane {
+    position: relative;
+    min-height: 85vh;
+  }
+  .navBox {
+    .taroNavbar {
+      // position: fixed;
+      // left: 0;
+      // right: 0;
+      // top: 80px;
+      z-index: 999;
+      .taroNavbarWrap {
+        // padding-top: 80px;
+        // position: fixed;
+        // top: 120px;
+        padding-top: 70px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+  .dragUpdataPage {
+    .itemCont {
+      width: auto;
+    }
+  }
+  .navBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,321 @@
+@import "~taro-ui/dist/style/components/index.scss";
+.boxBg {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 0 0 40px;
+  box-shadow: 0px 1px 6px 1px rgba(24, 26, 57, 0.11);
+}
+.headInfo {
+  padding: 10px 0 40px;
+  border-bottom: 1px solid #f7f4f5;
+  .lHead {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    image {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .rText {
+    margin-left: 10px;
+    vertical-align: middle;
+    margin-top: 15px;
+    text {
+      display: block;
+    }
+    .title {
+      font-size: 32px;
+      font-family: PingFangSC, PingFangSC-Regular;
+      font-weight: 400;
+      text-align: left;
+      color: #7a7d9e;
+      line-height: 22px;
+      padding-bottom: 10px;
+    }
+    .address {
+      padding: 28px 0 0;
+      font-size: 28px;
+      font-family: PingFangSC, PingFangSC-Regular;
+      font-weight: 400;
+      text-align: justify;
+      color: #181a39;
+      line-height: 20px;
+      text {
+        text-align: right;
+      }
+    }
+  }
+}
+.timeInfo {
+  border-bottom: 1px solid #f7f4f5;
+  padding: 30px;
+  color: #7a7d9e;
+  line-height: 34px;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  & > text {
+    float: right;
+    .icon {
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      background: url(./assets/images/icon_mine_time.png) no-repeat;
+      background-size: contain;
+      vertical-align: bottom;
+      margin-right: 6px;
+    }
+  }
+}
+.kilometre {
+  display: flex;
+  // margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 40px;
+  text {
+    display: block;
+    text-align: center;
+  }
+  .info {
+    font-size: 24px;
+    font-family: PingFangSC, PingFangSC-Semibold;
+    text-align: center;
+    color: #bac0cd;
+    line-height: 34px;
+    // font-weight: 600;
+    flex: 1;
+    text {
+      display: block;
+    }
+    .num {
+      // font-family: DINCond, PingFangSC, PingFangSC-Semibold;
+      // font-weight: 700;
+      // text-align: center;
+      // color: #181a39;
+
+      padding: 15px 0;
+    }
+  }
+}
+.num {
+  font-size: 80px;
+  font-family: DINCond;
+  font-weight: 700;
+  text-align: center;
+  line-height: 80px;
+  color: #181a39;
+}
+// 弹层
+.at-modal__content {
+  padding: 30px 50px 40px;
+  min-height: auto;
+  border-radius: 12px;
+  text-align: center;
+  color: #181a39;
+  line-height: 40px;
+}
+.at-modal__footer--simple .at-modal__action > button {
+  color: #181a39;
+}
+.at-modal__footer--simple .at-modal__action > button:last-child:nth-child(2),
+.at-modal__footer .at-modal__action > button:last-child {
+  color: #00b8d4;
+}
+.at-modal__header {
+  padding-top: 30px;
+  padding-bottom: 0;
+  font-size: 36px;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: center;
+  color: #181a39;
+  line-height: 50px;
+  &:after {
+    border: 0 none;
+  }
+}
+.itemCont {
+  background-color: #fff;
+  width: 100%;
+  margin: 30px;
+  margin-bottom: 0;
+  padding: 30px;
+  border: 1px solid #f7f4f5;
+  border-radius: 24px;
+  .itemTit {
+    font-size: 32px;
+    line-height: 44px;
+    color: #181a39;
+    margin-bottom: 20px;
+  }
+  .itemDis {
+    font-size: 24px;
+    line-height: 34px;
+    color: #7a7d9e;
+    text {
+      float: right;
+    }
+  }
+  .headInfo {
+    padding: 0;
+    border: 0 none;
+    .rText {
+      text {
+        width: 100%;
+      }
+    }
+    .itemDis {
+      text {
+        width: auto;
+      }
+    }
+  }
+}
+.noDataBox {
+  font-size: 28px;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #7a7d9e;
+  line-height: 40px;
+  text-align: center;
+
+  .noIcon {
+    background: url(./assets/images/img_kong.png) no-repeat;
+    background-size: contain;
+    width: 380px;
+    // height: 280px;
+    display: inline-block;
+    // position: absolute;
+    // top: 22%;
+    // left: 50%;
+    // margin-left: -190px;
+    margin-top: 38%;
+    padding-top: 316px;
+  }
+  .btnBox {
+    position: relative;
+    width: 300px;
+    margin: 180px auto 0;
+  }
+}
+//开始骑行
+.goExercise {
+  width: 300px;
+  height: 300px;
+  margin: 0 30px;
+  vertical-align: middle;
+  display: inline-block;
+  icon {
+    width: 300px;
+    height: 300px;
+    box-shadow: none;
+  }
+  .startIcon {
+    background: url(./assets/images/btn_kaishix.png) no-repeat;
+    background-size: contain;
+  }
+  .backIcon {
+    background: url(./assets/images/btn_fanhuiyundong.png) no-repeat;
+    background-size: contain;
+  }
+}
+
+.navBox {
+  .taroNavbar {
+    color: "#181a39";
+    .taroNavbarWrap {
+      height: 80px;
+      line-height: 80px;
+      .backHomeIcon,
+      .backIcon {
+        width: 88px;
+        height: 88px;
+        vertical-align: middle;
+        display: inline-block;
+      }
+      .backHomeIcon {
+        background: url(./assets/images/btn_nav_back.png) no-repeat;
+        background-size: contain;
+        margin-left: 30px;
+      }
+      .backIcon {
+        background: url(./assets/images/btn_nav_back_dark.png) no-repeat;
+        background-size: contain;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+.textR {
+  float: right;
+}
+.isShare {
+  display: inline-block;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  background: #e6f8f0;
+  border-radius: 8px;
+  font-size: 24px;
+  color: #1dc779;
+  padding: 0 20px;
+}
+.at-button {
+  height: 88px;
+  opacity: 1;
+  background: #fcd700;
+  border-radius: 44px;
+  color: #181a39;
+  font-weight: 700;
+  border: 0 none;
+}
+.dragUpdataPage {
+  height: 88vh;
+  position: relative;
+  overflow: hidden;
+  .downDragBox {
+    width: 100%;
+    top: 0px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    position: absolute;
+  }
+  .upDragBox {
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    position: absolute;
+  }
+  .dragUpdata {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .downText {
+    margin-left: 20px;
+  }
+}
+.at-modal,
+.at-modal__container {
+  z-index: 99999;
+}
+// .index {
+//   overflow-x: hidden;
+// }
+@font-face {
+  font-family: "DINCond";
+  src: url("./assets/font/DINCond-Medium.otf");
+}

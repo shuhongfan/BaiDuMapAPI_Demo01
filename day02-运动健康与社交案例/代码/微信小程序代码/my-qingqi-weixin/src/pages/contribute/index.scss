@@ -1,0 +1,105 @@
+.contribute {
+  .boxBg {
+    padding: 40px 30px;
+    margin-bottom: 20px;
+  }
+  map {
+    width: 100%;
+    height: 100vh;
+    opacity: 0.9;
+  }
+  .main {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    z-index: 999;
+    bottom: 55px;
+    .fromBox {
+      padding: 30px 30px 15px;
+      .tit {
+        font-size: 28px;
+        font-family: PingFangSC, PingFangSC-Semibold;
+        font-weight: 600;
+        text-align: left;
+        line-height: 20px;
+        color: #181a39;
+        padding-bottom: 20px;
+        text {
+          color: #ff4949;
+        }
+      }
+      .at-textarea {
+        border: 0 none;
+
+        .at-textarea__textarea {
+          font-size: 28px;
+          color: #181a39;
+        }
+      }
+
+      .at-form:after {
+        border: 0 none;
+      }
+    }
+  }
+  .succeedBox {
+    position: absolute;
+    top: 25%;
+    text-align: center;
+    font-size: 28px;
+    font-family: PingFangSC, PingFangSC-Regular;
+    font-weight: 400;
+    text-align: center;
+    color: #7a7d9e;
+    width: 100%;
+    height: 300px;
+    // margin-top: -250px;
+    text {
+      display: block;
+    }
+    .icon {
+      background: url(../../assets/images/icon_fabuchenggong.png) no-repeat;
+      background-size: contain;
+      width: 140px;
+      height: 140px;
+      margin-bottom: 45px;
+    }
+    .tip {
+      padding: 20px 0;
+      font-size: 36px;
+      font-family: PingFangSC, PingFangSC-Medium;
+      font-weight: 500;
+      text-align: center;
+      color: #181a39;
+      line-height: 50px;
+    }
+    .btnBox {
+      width: 340px;
+      display: inline-block;
+      padding: 80px 0 0;
+    }
+  }
+
+  .btnBox {
+    // display: flex;
+    padding-bottom: 30px;
+    .at-button {
+      flex: 1;
+      &.contributeBtn {
+        background: #181a39;
+        color: #fcd700;
+        margin-right: 30px;
+      }
+      &.at-button--disabled {
+        background: #fff2aa;
+        color: #bac0cd;
+      }
+    }
+  }
+}
+.finish {
+  .btnBox {
+    padding-top: 18px;
+    padding-bottom: 20px;
+  }
+}

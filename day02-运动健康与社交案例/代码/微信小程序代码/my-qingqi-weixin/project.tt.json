@@ -1,0 +1,13 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "project-qingqi-taro3-weixin-react-ts",
+  "description": "qingqi",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
+}

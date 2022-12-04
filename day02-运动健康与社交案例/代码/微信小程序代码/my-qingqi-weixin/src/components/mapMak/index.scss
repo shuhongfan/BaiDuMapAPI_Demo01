@@ -1,0 +1,23 @@
+.mapComp {
+  width: 100vw;
+  height: 99.5vh;
+  border: solid 1px #ccc;
+  .mapConver {
+    width: 100%;
+    height: 100%;
+  }
+}
+.coverloc {
+  z-index: 6;
+  margin: auto;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100px;
+  width: 100px;
+  .coverlocpng {
+    height: 100px;
+    width: 100px;
+  }
+}

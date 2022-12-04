@@ -1,0 +1,26 @@
+.navBox {
+  .taroNavbar {
+    color: "#181a39";
+    .taroNavbarWrap {
+      height: 80px;
+      line-height: 80px;
+      .backHomeIcon,
+      .backIcon {
+        width: 88px;
+        height: 88px;
+        vertical-align: middle;
+        display: inline-block;
+      }
+      .backHomeIcon {
+        background: url(../../assets/images/btn_nav_back.png) no-repeat;
+        background-size: contain;
+        margin-left: 30px;
+      }
+      .backIcon {
+        background: url(../../assets/images/btn_nav_back_dark.png) no-repeat;
+        background-size: contain;
+        margin-left: 10px;
+      }
+    }
+  }
+}

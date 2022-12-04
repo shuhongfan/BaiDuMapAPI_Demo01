@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/BaiDuMapAPI_Demo01.iml" filepath="$PROJECT_DIR$/.idea/BaiDuMapAPI_Demo01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day01-地图基础API与搜索/资料/itcast-baidumap/itcast-baidumap.iml" filepath="$PROJECT_DIR$/day01-地图基础API与搜索/资料/itcast-baidumap/itcast-baidumap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day01-地图基础API与搜索/代码/itcast-baidumap/itcast-baidumap (1).iml" filepath="$PROJECT_DIR$/day01-地图基础API与搜索/代码/itcast-baidumap/itcast-baidumap (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/day05-地图数据收集与存储/资料/相关代码/my-geoserver.iml" filepath="$PROJECT_DIR$/day05-地图数据收集与存储/资料/相关代码/my-geoserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day05-地图数据收集与存储/代码/my-geoserver/my-geoserver (1) (cn.itcast.geoserver).iml" filepath="$PROJECT_DIR$/day05-地图数据收集与存储/代码/my-geoserver/my-geoserver (1) (cn.itcast.geoserver).iml" />
+      <module fileurl="file://$PROJECT_DIR$/day05-地图数据收集与存储/代码/my-geoserver-consumer/my-geoserver-consumer.iml" filepath="$PROJECT_DIR$/day05-地图数据收集与存储/代码/my-geoserver-consumer/my-geoserver-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day04-物流行业地图案例/资料/搭建工程文件/my-jinyun.iml" filepath="$PROJECT_DIR$/day04-物流行业地图案例/资料/搭建工程文件/my-jinyun.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day04-物流行业地图案例/代码/my-jinyun/my-jinyun (1).iml" filepath="$PROJECT_DIR$/day04-物流行业地图案例/代码/my-jinyun/my-jinyun (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/day05-地图数据收集与存储/代码/my-netty/my-netty.iml" filepath="$PROJECT_DIR$/day05-地图数据收集与存储/代码/my-netty/my-netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day02-运动健康与社交案例/代码/后台服务代码/已实现功能版本/my-qingqi/my-qingqi.iml" filepath="$PROJECT_DIR$/day02-运动健康与社交案例/代码/后台服务代码/已实现功能版本/my-qingqi/my-qingqi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day02-运动健康与社交案例/代码/后台服务代码/my-qingqi/my-qingqi (1).iml" filepath="$PROJECT_DIR$/day02-运动健康与社交案例/代码/后台服务代码/my-qingqi/my-qingqi (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/day03-运动健康与社交案例/代码/my-qingqi/my-qingqi (2).iml" filepath="$PROJECT_DIR$/day03-运动健康与社交案例/代码/my-qingqi/my-qingqi (2).iml" />
+    </modules>
+  </component>
+</project>

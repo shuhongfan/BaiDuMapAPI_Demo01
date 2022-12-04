@@ -1,0 +1,13 @@
+.lineBox {
+  &.line {
+    position: fixed;
+    width: 268px;
+    height: 10px;
+    opacity: 1;
+    left: 50%;
+    bottom: 16px;
+    margin-left: -134px;
+    background: #000000;
+    border-radius: 100px;
+  }
+}

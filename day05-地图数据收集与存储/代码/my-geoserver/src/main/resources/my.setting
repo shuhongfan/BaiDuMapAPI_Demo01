@@ -1,0 +1,8 @@
+#netty启动监听的端口号
+server.port=38080
+
+#kafka集群服务
+kafka.servers=192.168.31.81:9092,192.168.31.81:9093,192.168.31.81:9094
+
+#指定kafka中的topic
+kafka.topic=MY-GEO-SERVER
