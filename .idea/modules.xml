@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/BaiDuMapAPI_Demo01.iml" filepath="$PROJECT_DIR$/.idea/BaiDuMapAPI_Demo01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaiduMap/BaiduMap.iml" filepath="$PROJECT_DIR$/BaiduMap/BaiduMap.iml" />
       <module fileurl="file://$PROJECT_DIR$/day01-地图基础API与搜索/资料/itcast-baidumap/itcast-baidumap.iml" filepath="$PROJECT_DIR$/day01-地图基础API与搜索/资料/itcast-baidumap/itcast-baidumap.iml" />
       <module fileurl="file://$PROJECT_DIR$/day01-地图基础API与搜索/代码/itcast-baidumap/itcast-baidumap (1).iml" filepath="$PROJECT_DIR$/day01-地图基础API与搜索/代码/itcast-baidumap/itcast-baidumap (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/day05-地图数据收集与存储/资料/相关代码/my-geoserver.iml" filepath="$PROJECT_DIR$/day05-地图数据收集与存储/资料/相关代码/my-geoserver.iml" />
@@ -14,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/day02-运动健康与社交案例/代码/后台服务代码/已实现功能版本/my-qingqi/my-qingqi.iml" filepath="$PROJECT_DIR$/day02-运动健康与社交案例/代码/后台服务代码/已实现功能版本/my-qingqi/my-qingqi.iml" />
       <module fileurl="file://$PROJECT_DIR$/day02-运动健康与社交案例/代码/后台服务代码/my-qingqi/my-qingqi (1).iml" filepath="$PROJECT_DIR$/day02-运动健康与社交案例/代码/后台服务代码/my-qingqi/my-qingqi (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/day03-运动健康与社交案例/代码/my-qingqi/my-qingqi (2).iml" filepath="$PROJECT_DIR$/day03-运动健康与社交案例/代码/my-qingqi/my-qingqi (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-qingqi/my-qingqi (3).iml" filepath="$PROJECT_DIR$/my-qingqi/my-qingqi (3).iml" />
     </modules>
   </component>
 </project>

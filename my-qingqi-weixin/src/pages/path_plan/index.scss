@@ -1,0 +1,46 @@
+.pathPlan {
+  .tableCont {
+    position: absolute;
+    display: flex;
+    left: 0px;
+    bottom: 100px;
+    z-index: 99;
+    width: 100vw;
+    justify-content: center;
+    text-align: center;
+    .histroy,
+    .nearby {
+      background: #fff;
+      color: #181a39;
+      width: 160px;
+      font-size: 28px;
+      height: 76px;
+      border-radius: 76px;
+      line-height: 76px;
+      margin: 0 20px;
+      position: relative;
+      box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.09);
+      .icon {
+        position: relative;
+        top: 6px;
+        width: 36px;
+        height: 36px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.planBox {
+  .navBox {
+    position: absolute;
+    top: 70px;
+    z-index: 9;
+    background-color: transparent !important;
+    padding-top: 0 !important;
+    .taroNavbar {
+      .taroNavbarWrap {
+        background-color: transparent !important;
+      }
+    }
+  }
+}

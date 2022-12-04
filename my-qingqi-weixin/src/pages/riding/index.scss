@@ -1,0 +1,226 @@
+.ridingBox {
+  .exercise {
+    padding: 0 40px;
+    display: flex;
+    // & > view {
+    //   display: flex;
+    // }
+
+    .info {
+      font-size: 24px;
+      font-family: PingFangSC, PingFangSC-Semibold;
+      text-align: center;
+      color: #bac0cd;
+      line-height: 34px;
+      flex: 1;
+      text {
+        display: block;
+      }
+      .num {
+        // font-size: 40px;
+        font-family: DINCond;
+        // font-weight: 700;
+        // text-align: center;
+        // color: #181a39;
+        // line-height: 48px;
+        padding: 15px 0;
+      }
+    }
+  }
+  .stopActive {
+    .info {
+      color: #dcdfe6;
+      .num {
+        color: #8b8c9c;
+      }
+    }
+  }
+  .longStopActive {
+    .info {
+      color: #f8f9fa;
+      .num {
+        color: #e9e9ec;
+      }
+    }
+  }
+  .longStop,
+  .echarts {
+    width: 525px;
+    height: 525px;
+    padding: 0 0 0;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+  }
+  .longStop {
+    border: 8px solid #e7e9ee;
+    border-radius: 50%;
+    padding: 0;
+    margin-top: 100px;
+    text {
+      display: block;
+      width: 100%;
+      font-size: 40px;
+      font-family: PingFangSC, PingFangSC-Semibold;
+      font-weight: 600;
+      text-align: center;
+      color: #181a39;
+      line-height: 28px;
+    }
+  }
+  .echarts {
+    .echartsInfo {
+      width: 100%;
+    }
+    .echartsInfo {
+      text {
+        display: block;
+        color: #7a7d9e;
+      }
+      .num {
+        font-size: 120px;
+        color: #181a39;
+        line-height: 108px;
+        padding: 15px 0;
+      }
+    }
+    .infoStop {
+      width: 100%;
+      font-size: 70px;
+      font-family: PingFangSC, PingFangSC-Semibold;
+      font-weight: 600;
+      text-align: center;
+      color: #181a39;
+      line-height: 108px;
+    }
+  }
+  .btnOperation {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 60px;
+    .btn {
+      width: 224px;
+      height: 224px;
+      display: inline-block;
+    }
+    view {
+      display: inline-block;
+    }
+    .at-icon {
+      display: block;
+      margin-top: 40px;
+    }
+    .btnPause {
+      background-image: url("../../assets/images/btn_continue.png");
+      background-size: contain;
+    }
+    .btnStart {
+      background-image: url("../../assets/images/btn_start.png");
+      background-size: contain;
+    }
+    .btnPress {
+      background-image: url("../../assets/images/btn_stop.png");
+      background-size: contain;
+    }
+    .mapIcon {
+      background-image: url("../../assets/images/btn_map.png");
+      background-size: contain;
+      width: 96px;
+      height: 96px;
+      margin-left: 30px;
+      vertical-align: middle;
+    }
+    .btnInfo {
+      vertical-align: middle;
+    }
+  }
+}
+.canvas {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+}
+
+.circle_box,
+.circle_draw {
+  position: relative;
+}
+
+.circle_bg {
+  position: absolute;
+  // width: 500px;
+  // height: 500px;
+}
+
+.circle_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  // width: 500px;
+  // height: 500px;
+}
+
+.circle_txt {
+  position: absolute;
+  font-size: 28rpx;
+}
+.container {
+  position: relative;
+}
+.controls {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(0, 0, 0, 0.5);
+  .main {
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #ffffff;
+    padding: 50px 0 0;
+    text-align: center;
+    color: #181a39;
+    line-height: 40px;
+    border-radius: 24px;
+    transform: translate(-50%, -50%);
+    .con {
+      padding: 0 60px 40px;
+      overflow: auto;
+      white-space: normal;
+      line-height: 40px;
+    }
+    .btn {
+      // border-top: 1px solid #f7f4f5;
+      display: flex;
+      font-size: 28px;
+      text-align: left;
+      color: #181a39;
+      line-height: 40px;
+      text-align: center;
+      cover-view {
+        flex: 1;
+        display: inline-block;
+        background: none;
+        border-top: 1px solid #f7f4f5;
+        border-radius: 0;
+        padding: 30px;
+        &:first-child {
+          // border-right: 1px solid #f7f4f5;
+        }
+        &:last-child {
+          border-left: 1px solid #f7f4f5;
+          color: #00b8d4;
+        }
+      }
+    }
+  }
+}

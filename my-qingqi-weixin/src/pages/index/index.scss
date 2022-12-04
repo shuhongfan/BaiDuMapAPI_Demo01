@@ -1,0 +1,122 @@
+page {
+  background: url(../../assets/images/img_home_bg.png) center center no-repeat;
+  background-size: cover;
+}
+.index {
+  .col {
+    color: #bac0cd;
+  }
+  flex-direction: column;
+  width: 100%;
+  .topbgGradient {
+    background: linear-gradient(
+      rgba(255, 255, 255, 1) 30%,
+      rgba(255, 255, 255, 0)
+    );
+  }
+  .botbgGradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      rgba(255, 255, 255, 0) 1%,
+      rgb(255, 255, 255) 30%,
+      rgb(255, 255, 255) 100%
+    );
+  }
+  .kilometre {
+    display: block;
+    padding-top: 65px;
+    text {
+      display: block;
+      text-align: center;
+    }
+    .text {
+      font-size: 28px;
+      line-height: 40px;
+      padding: 30px;
+      color: #7a7d9e;
+    }
+    .num {
+      font-size: 160px;
+      line-height: 150px;
+    }
+  }
+  .bottomBox {
+    // position: absolute;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    font-size: 28px;
+    .pathBox icon,
+    .myBox icon {
+      width: 100px;
+      height: 100px;
+      display: block;
+      margin-bottom: 12px;
+      border-radius: 50%;
+      box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.09);
+    }
+    .pathBox {
+      display: inline-block;
+      vertical-align: middle;
+      text {
+        font-family: PingFangSC, PingFangSC-Regular;
+        font-weight: 400;
+        text-align: center;
+        color: #181a39;
+        line-height: 20px;
+      }
+      icon {
+        background: #ffffff url(../../assets/images/icon_footbar_wode_nor.png)
+          center center no-repeat;
+        background-size: 60px 60px;
+      }
+    }
+
+    .myBox {
+      display: inline-block;
+      vertical-align: middle;
+
+      icon {
+        background: #ffffff url(../../assets/images/myicon.png) center center
+          no-repeat;
+        background-size: 60px 60px;
+      }
+    }
+    .isRun {
+      icon {
+        background: #ffffff url(../../assets/images/isrun.png) center center
+          no-repeat;
+        background-size: 60px 60px;
+      }
+    }
+  }
+  .define {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #e5e5e5;
+    color: #00b8d4;
+    font-weight: 500;
+  }
+  .at-modal__content {
+    padding: 30px 50px;
+  }
+  .at-modal__header {
+    font-size: 36px;
+    font-weight: 500;
+    color: #181a39;
+    line-height: 50px;
+  }
+}
+.logo {
+  background: url(../../assets/images/icon_logo.png) no-repeat;
+  background-size: contain;
+  width: 160px;
+  height: 52px;
+  margin-left: 30px;
+  display: inline-block;
+  vertical-align: middle;
+}

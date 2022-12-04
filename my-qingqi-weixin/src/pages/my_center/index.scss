@@ -1,0 +1,180 @@
+page {
+  background: #f9f9f9;
+}
+.userBox {
+  .headbg {
+    background: url(../../assets/images/img_bg_mine.jpg) no-repeat;
+    background-size: contain;
+    position: fixed;
+    // height: 408px;
+    width: 100%;
+    z-index: 9;
+  }
+
+  .navBox {
+    background-color: transparent !important;
+    .taroNavbarWrap {
+      background-color: transparent !important;
+      .backIcon {
+        background: url(../../assets/images/btn_nav_back_light.png) no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  .head {
+    padding: 30px 60px 0;
+    .lHead {
+      width: 124px;
+      height: 124px;
+      border: 6px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      margin-right: 24px;
+      image {
+        width: 124px;
+        height: 124px;
+        border-radius: 50%;
+      }
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .rText {
+      color: #fff;
+      display: inline-block;
+      vertical-align: middle;
+      .tit {
+        font-size: 32px;
+        line-height: 44px;
+        display: block;
+        padding-bottom: 12px;
+      }
+      .adress {
+        font-size: 24px;
+        .addressIcon {
+          background: url(../../assets/images/icon_wode_weizhi.png) no-repeat;
+          background-size: contain;
+          width: 32px;
+          height: 32px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+        text {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+  .boxBg {
+    margin: 30px 30px 0;
+    padding-top: 16px;
+    padding-bottom: 10px;
+  }
+  .kilometre {
+    .info {
+      .num {
+        font-size: 80px;
+        padding: 20px 0;
+      }
+    }
+  }
+  .userMain {
+    padding-top: 610px;
+  }
+  .itemYear {
+    padding: 20px 34px;
+  }
+  .itemCont {
+    width: auto;
+
+    color: #7a7d9e;
+    margin-top: 30px;
+    .itemTit {
+      color: #7a7d9e;
+      margin-bottom: 10px;
+      .textR {
+        font-size: 24px;
+      }
+    }
+
+    .items {
+      border-bottom: 1px solid #f7f4f5;
+      border-radius: 13px;
+      padding: 30px 0;
+      &:last-child {
+        border: 0 none;
+      }
+      .at-button {
+        height: 64px;
+        line-height: 64px;
+        font-size: 28px;
+        margin-top: 0;
+      }
+    }
+    .tit {
+      padding-bottom: 14px;
+      padding-top: 10px;
+      .num {
+        font-size: 56px;
+        line-height: 34px;
+        padding-right: 10px;
+      }
+      .textR {
+        margin-top: -12px;
+      }
+    }
+
+    .lHead {
+      width: 56px;
+      height: 56px;
+      margin-right: 20px;
+      background: url(../../assets/images/icon_qixing.png) no-repeat;
+      background-size: contain;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .rText {
+      display: inline-block;
+      width: 87%;
+    }
+    icon {
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      vertical-align: middle;
+      &.icon {
+        background: url(../../assets/images/icon_mine_time.png) no-repeat;
+        background-size: contain;
+      }
+      &.timeIcon {
+        background: url(../../assets/images/icon_sudu.png) no-repeat;
+        background-size: contain;
+      }
+    }
+    .timeSpeed {
+      font-size: 24px;
+      & > view {
+        display: inline-block;
+      }
+      .time {
+        padding-right: 30px;
+      }
+    }
+  }
+  .at-button {
+    height: 88px;
+    line-height: 86px;
+    margin-top: 15px;
+  }
+  .noDataBox {
+    position: absolute;
+    width: 460px;
+    margin-left: -230px;
+    top: 50%;
+    left: 50%;
+    .noIcon {
+      margin-top: 10%;
+    }
+    .btnBox {
+      margin-top: 140px;
+    }
+  }
+}

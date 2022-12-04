@@ -72,7 +72,8 @@ public class RouteService {
      * @return
      */
     private Query createQuery(String routeId) {
-        return Query.query(Criteria.where("id").is(new ObjectId(routeId))
+        return Query.query(
+                Criteria.where("id").is(new ObjectId(routeId))
                 .and("userId").is(UserThreadLocal.get()));
     }
 }

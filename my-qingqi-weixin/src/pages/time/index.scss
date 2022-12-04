@@ -1,0 +1,61 @@
+page,
+.countDown {
+  background: #fcd700;
+  vertical-align: middle;
+  text-align: end;
+  .text {
+    width: 100%;
+    font-size: 320px;
+    height: 300px;
+    font-family: DINCond;
+    font-weight: 700;
+    text-align: center;
+    color: #181a39;
+    position: absolute;
+    top: 50%;
+    margin-top: -200px;
+    opacity: 0;
+  }
+}
+// designTemplate
+.text1 {
+  animation: shrinkAnimation 1.1s ease-in-out 0s forwards;
+}
+.text2 {
+  animation: shrinkAnimation 1.1s ease-in-out 1s forwards;
+}
+.text3 {
+  animation: shrinkAnimation 1.1s ease-in-out 2s forwards;
+}
+.text4 {
+  animation: shrinkAnimation 1s ease-in-out 3s forwards;
+}
+@keyframes shrinkAnimation {
+  /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    /*开始为原始大小*/
+  }
+  25% {
+    transform: scale(1.3);
+    opacity: 0.6;
+    /*开始为原始大小*/
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.8;
+    /*开始为原始大小*/
+  }
+  75% {
+    transform: scale(1.3);
+    opacity: 1;
+    /*开始为原始大小*/
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+    /*开始为原始大小*/
+  }
+}

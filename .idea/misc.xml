@@ -14,8 +14,10 @@
         <option value="$PROJECT_DIR$/day05-地图数据收集与存储/代码/my-geoserver/pom.xml" />
         <option value="$PROJECT_DIR$/day05-地图数据收集与存储/代码/my-geoserver-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/day05-地图数据收集与存储/代码/my-netty/pom.xml" />
+        <option value="$PROJECT_DIR$/BaiduMap/pom.xml" />
+        <option value="$PROJECT_DIR$/my-qingqi/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

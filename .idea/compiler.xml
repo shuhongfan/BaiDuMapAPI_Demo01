@@ -2,24 +2,28 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="my-qingqi" />
         <module name="my-jinyun (1)" />
         <module name="my-geoserver (1) (cn.itcast.geoserver)" />
         <module name="my-jinyun" />
         <module name="my-geoserver-consumer" />
+        <module name="my-geoserver" />
+        <module name="BaiduMap" />
+        <module name="my-qingqi" />
         <module name="my-qingqi (1)" />
+        <module name="my-qingqi (3)" />
         <module name="my-qingqi (2)" />
         <module name="my-netty" />
-        <module name="my-geoserver" />
         <module name="itcast-baidumap (1)" />
         <module name="itcast-baidumap" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="BaiduMap" target="1.8" />
       <module name="itcast-baidumap" target="1.8" />
       <module name="itcast-baidumap (1)" target="1.8" />
       <module name="my-geoserver" target="1.8" />
@@ -31,10 +35,12 @@
       <module name="my-qingqi" target="1.8" />
       <module name="my-qingqi (1)" target="1.8" />
       <module name="my-qingqi (2)" target="1.8" />
+      <module name="my-qingqi (3)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="BaiduMap" options="-parameters" />
       <module name="itcast-baidumap" options="-parameters" />
       <module name="itcast-baidumap (1)" options="-parameters" />
       <module name="my-geoserver-consumer" options="-parameters" />
@@ -43,6 +49,7 @@
       <module name="my-qingqi" options="-parameters" />
       <module name="my-qingqi (1)" options="-parameters" />
       <module name="my-qingqi (2)" options="-parameters" />
+      <module name="my-qingqi (3)" options="-parameters" />
     </option>
   </component>
 </project>

@@ -1,0 +1,27 @@
+.historyCont {
+  background: #f9f9f9;
+  min-height: 100vh;
+  .itemCont {
+    background-color: #fff;
+    width: auto;
+    margin: 30px;
+    margin-bottom: 0;
+    padding: 30px;
+    border: 1px solid #f7f4f5;
+    border-radius: 24px;
+    .itemTit {
+      font-size: 32px;
+      line-height: 44px;
+      color: #181a39;
+      margin-bottom: 20px;
+    }
+    .itemDis {
+      font-size: 24px;
+      line-height: 34px;
+      color: #7a7d9e;
+      text {
+        float: none;
+      }
+    }
+  }
+}

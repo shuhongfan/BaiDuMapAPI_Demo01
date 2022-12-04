@@ -1,0 +1,15 @@
+.perTabCont {
+  // width: 525px;
+  // height: 525px;
+  // border-radius: 100%;
+  position: absolute;
+  top: 100px;
+  z-index: 0;
+  .pertable {
+    position: absolute;
+    // width: 525px;
+    // height: 525px;
+    z-index: -1;
+  }
+  display: none;
+}
