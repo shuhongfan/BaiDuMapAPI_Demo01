@@ -4,9 +4,14 @@ import cn.hutool.core.map.MapUtil;
 import cn.hutool.http.Method;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.qingqi.config.BaiduConfig;
+import com.qingqi.pojo.Route;
 import com.qingqi.utils.UserThreadLocal;
 import com.qingqi.vo.RunParamVo;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +19,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
+@Slf4j
 public class BaiDuService {
+
+    private static final ObjectMapper MAPPER = new ObjectMapper();
+
+    static {
+//        设置驼峰转化的参数
+        MAPPER.setPropertyNamingStrategy(PropertyNamingStrategy.SNAKE_CASE);
+    }
+
     @Autowired
     private BaiduConfig baiduConfig;
 
@@ -110,5 +124,30 @@ public class BaiDuService {
                     }
                     return false;
                 });
+    }
+
+
+    public Route queryEntity(String routeId, Long startTime, Long endTime) {
+        String url = this.baiduConfig.getUrl() + "/track/gettrack";
+
+        Map<String, Object> paramMap = MapUtil.builder(new HashMap<String, Object>())
+                .put("entity_name", this.createEntityName(routeId))
+                .put("start_time", startTime)
+                .put("end_time", endTime)
+                .put("is_processed", 1)
+                .put("coord_type_output", "gcj02")
+                .build();
+
+        return this.baiduApiService.execute(url,Method.POST,paramMap,httpResponse -> {
+            if (httpResponse.isOk()) {
+                String body = httpResponse.body();
+                try {
+                    return MAPPER.readValue(body, Route.class);
+                } catch (JsonProcessingException e) {
+                    log.error("查询鹰眼服务出错，查询到的数据为：{}", body, e);
+                }
+            }
+            return null;
+        });
     }
 }
