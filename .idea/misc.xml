@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/jinyun" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -16,6 +20,16 @@
         <option value="$PROJECT_DIR$/day05-地图数据收集与存储/代码/my-netty/pom.xml" />
         <option value="$PROJECT_DIR$/BaiduMap/pom.xml" />
         <option value="$PROJECT_DIR$/my-qingqi/pom.xml" />
+        <option value="$PROJECT_DIR$/qingqi/pom.xml" />
+        <option value="$PROJECT_DIR$/jinyun/pom.xml" />
+        <option value="$PROJECT_DIR$/Netty/pom.xml" />
+        <option value="$PROJECT_DIR$/my-netty-geoserver/pom.xml" />
+        <option value="$PROJECT_DIR$/DEMO/BaiduMap/pom.xml" />
+        <option value="$PROJECT_DIR$/DEMO/jinyun/pom.xml" />
+        <option value="$PROJECT_DIR$/DEMO/my-netty-geoserver/pom.xml" />
+        <option value="$PROJECT_DIR$/DEMO/Netty/pom.xml" />
+        <option value="$PROJECT_DIR$/DEMO/qingqi/pom.xml" />
+        <option value="$PROJECT_DIR$/DEMO/my-geoserver-consumer/pom.xml" />
       </list>
     </option>
   </component>

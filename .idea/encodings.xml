@@ -3,6 +3,18 @@
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/BaiduMap/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/BaiduMap/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DEMO/BaiduMap/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DEMO/Netty/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DEMO/Netty/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DEMO/jinyun/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DEMO/jinyun/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DEMO/my-geoserver-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DEMO/my-geoserver-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DEMO/my-netty-geoserver/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DEMO/my-netty-geoserver/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DEMO/qingqi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DEMO/qingqi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Netty/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/day01-地图基础API与搜索/代码/itcast-baidumap/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/day01-地图基础API与搜索/代码/itcast-baidumap/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/day01-地图基础API与搜索/资料/itcast-baidumap/src/main/java" charset="UTF-8" />
@@ -14,8 +26,14 @@
     <file url="file://$PROJECT_DIR$/day04-物流行业地图案例/代码/my-jinyun/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/day04-物流行业地图案例/资料/搭建工程文件/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/day05-地图数据收集与存储/代码/my-geoserver-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jinyun/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my-jinyun/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my-jinyun/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my-netty-geoserver/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/my-qingqi/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/my-qingqi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/qingqi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/qingqi/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

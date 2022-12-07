@@ -1,0 +1,30 @@
+.el-date-table td.in-range div {
+  background-color: #fff6e2;
+}
+
+.el-date-editor {
+  background-color: #f8f5f5;
+  border-radius: 8px;
+  border: 0;
+  // &:hover {
+  //   border: 1px solid #887e7e;
+  // }
+
+  .el-range-input {
+    background-color: #f8f5f5;
+  }
+}
+// .el-range-editor.is-active,
+// .el-range-editor.is-active:hover {
+//   border: 1px solid #887e7e;
+// }
+
+.el-range-editor.is-active,
+.el-range-editor.is-active:focus {
+  border: 1px solid #ffb200 !important;
+}
+.el-picker-panel.el-date-range-picker {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.09);
+}

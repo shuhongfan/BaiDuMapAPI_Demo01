@@ -1,0 +1,123 @@
+//基本的按钮样式
+.baseBtnClass {
+  height: 40px;
+  border-radius: 20px;
+  border: 0;
+  font-size: 14px;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: center;
+  line-height: 40px;
+  padding-left: 26px;
+  padding-right: 26px;
+  cursor: pointer;
+  outline: 0;
+}
+.baseFontClass {
+  font-size: 13px;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #ffb200;
+  cursor: pointer;
+  border-color: transparent;
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  outline: 0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+//重要按钮
+.importantButton {
+  & {
+    @extend .baseBtnClass;
+    background: #00be76;
+    color: #ffffff;
+  }
+  &:hover {
+    background: #007a4c;
+  }
+
+  &:disabled {
+    background: #cce7dd;
+  }
+}
+//次重要按钮
+.minorImportantButton {
+  & {
+    @extend .baseBtnClass;
+    background: #ffb200;
+    color: #332929;
+  }
+  &:hover {
+    background: #ff8e00;
+  }
+
+  &:disabled {
+    background: #f8f5f5;
+    color: #b5abab;
+  }
+}
+//次要按钮
+.unimportanceButton {
+  & {
+    @extend .baseBtnClass;
+    background: #f8f5f5;
+    color: #332929;
+  }
+  &:hover {
+    background: #ffb200;
+  }
+
+  &:disabled {
+    background: #f8f5f5;
+    color: #b5abab;
+  }
+}
+//警示性按钮
+.errorButton {
+  & {
+    @extend .baseBtnClass;
+    background: #ff4d4f;
+    color: #ffffff;
+  }
+  &:hover {
+    background: #da5658;
+  }
+
+  &:disabled {
+    background: #f7d5d5;
+  }
+}
+//次警示性按钮
+.minorErrorButton {
+  & {
+    @extend .baseBtnClass;
+    background: #f8f5f5;
+    color: #ff4d4f;
+  }
+  &:hover {
+    background: #ff4d4f;
+    color: #ffffff;
+  }
+
+  &:disabled {
+    background: #f8f5f5;
+    color: #eccccd;
+  }
+}
+//字体按钮
+.fontOperateButton {
+  & {
+    @extend .baseFontClass;
+    color: #ffb200;
+  }
+  &:hover {
+    color: #ff8e00;
+  }
+
+  &:disabled {
+    color: #f2e3be;
+  }
+}

@@ -1,0 +1,43 @@
+.el-table {
+  .el-table__header-wrapper {
+    .el-table__header {
+      thead tr {
+        th > .cell {
+          font-size: 13px;
+          font-family: PingFangSC, PingFangSC-Medium;
+          font-weight: 500;
+          color: #887e7e;
+        }
+      }
+    }
+  }
+  .el-table__body-wrapper {
+    .el-table__row {
+      .cell {
+        font-size: 13px;
+        font-family: PingFangSC, PingFangSC-Regular;
+        font-weight: 400;
+        text-align: center;
+        color: #332929;
+      }
+    }
+    /*样式可以继续优化*/
+    .el-table__row--striped td {
+      background: #fdfcf9 !important;
+    }
+  }
+  // /* 设置滚动条的样式 */
+  // ::-webkit-scrollbar {
+  //   height: 14px;
+  // }
+  // /* 滚动槽 */
+  // ::-webkit-scrollbar-track {
+  //   height: 14px;
+  // }
+  // /* 滚动条滑块 */
+  // ::-webkit-scrollbar-thumb {
+  //   height: 5px;
+  //   background-color: #e0d8d6;
+  //   border: 0;
+  // }
+}

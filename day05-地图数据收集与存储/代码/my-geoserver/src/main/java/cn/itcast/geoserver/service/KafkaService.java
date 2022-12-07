@@ -5,7 +5,6 @@ import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
 import cn.itcast.geoserver.config.MyConfig;
 import cn.itcast.geoserver.handler.Request;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -13,7 +12,6 @@ import org.apache.kafka.common.serialization.StringSerializer;
 
 import java.util.Properties;
 
-@Slf4j
 public class KafkaService {
 
     private KafkaProducer<String, String> producer;
@@ -62,7 +60,7 @@ public class KafkaService {
         this.producer.send(new ProducerRecord<>(topic, msgJson), (metadata, exception) -> {
             if (null != exception) {
                 //发送失败
-                log.error("发送消息失败 msg = {}", msgJson, exception);
+                System.out.println(StrUtil.format("发送消息失败 msg = {}", msgJson, exception));
             }
         });
 

@@ -13,7 +13,7 @@ docker start configsvr01 configsvr02 configsvr03
 
 #进去容器进行操作
 docker exec -it configsvr01 /bin/bash
-mongo 192.168.31.81:17000
+mongo 192.168.120.20:17000
 
 #集群初始化
 rs.initiate(
@@ -21,9 +21,9 @@ rs.initiate(
     _id: "rs_configsvr",
     configsvr: true,
     members: [
-      { _id : 0, host : "192.168.31.81:17000" },
-      { _id : 1, host : "192.168.31.81:17001" },
-      { _id : 2, host : "192.168.31.81:17002" }
+      { _id : 0, host : "192.168.120.20:17000" },
+      { _id : 1, host : "192.168.120.20:17001" },
+      { _id : 2, host : "192.168.120.20:17002" }
     ]
   }
 )
@@ -46,46 +46,46 @@ docker start shardsvr04 shardsvr05 shardsvr06
 
 #进去容器执行
 docker exec -it shardsvr01 /bin/bash
-mongo 192.168.31.81:37000
+mongo 192.168.120.20:37000
 
 #初始化集群
 rs.initiate(
   {
     _id: "rs_shardsvr1",
     members: [
-      { _id : 0, host : "192.168.31.81:37000" },
-      { _id : 1, host : "192.168.31.81:37001" },
-      { _id : 2, host : "192.168.31.81:37002" }
+      { _id : 0, host : "192.168.120.20:37000" },
+      { _id : 1, host : "192.168.120.20:37001" },
+      { _id : 2, host : "192.168.120.20:37002" }
     ]
   }
 )
 
 #初始化集群二
-mongo 192.168.31.81:37003
+mongo 192.168.120.20:37003
 
 rs.initiate(
   {
     _id: "rs_shardsvr2",
     members: [
-      { _id : 0, host : "192.168.31.81:37003" },
-      { _id : 1, host : "192.168.31.81:37004" },
-      { _id : 2, host : "192.168.31.81:37005" }
+      { _id : 0, host : "192.168.120.20:37003" },
+      { _id : 1, host : "192.168.120.20:37004" },
+      { _id : 2, host : "192.168.120.20:37005" }
     ]
   }
 )
 
 #创建mongos节点容器，需要指定config服务
-docker create --name mongos -p 6666:27017 --entrypoint "mongos" mongo:4.0.3 --configdb rs_configsvr/192.168.31.81:17000,192.168.31.81:17001,192.168.31.81:17002 --bind_ip_all
+docker create --name mongos -p 6666:27017 --entrypoint "mongos" mongo:4.0.3 --configdb rs_configsvr/192.168.120.20:17000,192.168.120.20:17001,192.168.120.20:17002 --bind_ip_all
 
 docker start mongos
 
 #进入容器执行
 docker exec -it mongos bash
-mongo 192.168.31.81:6666
+mongo 192.168.120.20:6666
 
 #添加shard节点
-sh.addShard("rs_shardsvr1/192.168.31.81:37000,192.168.31.81:37001,192.168.31.81:37002")
-sh.addShard("rs_shardsvr2/192.168.31.81:37003,192.168.31.81:37004,192.168.31.81:37005")
+sh.addShard("rs_shardsvr1/192.168.120.20:37000,192.168.120.20:37001,192.168.120.20:37002")
+sh.addShard("rs_shardsvr2/192.168.120.20:37003,192.168.120.20:37004,192.168.120.20:37005")
 
 #启用分片
 sh.enableSharding("geoserver")
